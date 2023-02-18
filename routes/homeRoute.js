@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path')
 const router = express.Router();
+const {renderIndex} = require('../controllers/homeController')
 
 
 router.get('/', (req, res) => {
-    const absolutePath = path.parse(__dirname).dir + 'views/index.html'
-    console.log(absolutePath)
-    res.render('index')
+    renderIndex(req, res);
 })
 
 module.exports = router

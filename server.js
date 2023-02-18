@@ -10,6 +10,8 @@ app.engine('html', require('ejs').renderFile)
 //@ home route
 app.use('/', require('./routes/homeRoute'));
 
+//@ timestamp route
+app.use('/api/', require('./routes/TimestampRoute'))
 
 //@ server listen on port 3000
 const PORT = process.env.PORT || 3000;

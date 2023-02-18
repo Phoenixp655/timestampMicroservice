@@ -2,8 +2,8 @@ const express = require('express');
 const TimestampController = require('../controllers/TimestampController')
 const router = express.Router();
 
-router.post('/:unix',(req, res) => {
-    TimestampController
+router.get('/:date',(req, res) => {
+    res.json({date: new Date()})
 })
 
 module.exports = router
