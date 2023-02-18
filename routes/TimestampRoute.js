@@ -6,4 +6,4 @@ router.post('/:unix',(req, res) => {
     TimestampController
 })
 
-exports.Router
+module.exports = router
